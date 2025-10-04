@@ -8,12 +8,16 @@
 </head>
 
 <body>
+    <p id="demo"></p>
     <script>
-        let i = 10;
-        for (let x = 0; x >= 0; x++) {
-            document.write(x + "<br>"); i = x
+        const cars = ["BMD", "Volvo", "saab", "ford"];
+        let len = cars.length;
+        let i = 2;
+        let text = "";
+        for (; i < len; i++) {
+            text += cars[i] + "<br>";
         }
-        document.write(i + "<br>");
+        document.getElementById("demo").innerHTML = text;
     </script>
 </body>
 
