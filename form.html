@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Registration Form</h3>
+
+    <form action="" name="rgs">
+
+        Name: <br>
+        <input type="text" name="FullName" placeholder="Enter Your name"> <br>
+        Gender:
+        <input type="radio" name="gender" value="male"> male
+        <input type="radio" name="gender" value="female"> female <br>
+        dirstic: <br>
+        <select name="dirstic">
+            <option value=""> select one</option>
+            <option>Dhaka </option>
+            <option>rajshahi</option>
+            <option>khulna</option>
+            <option>barisaslo</option>
+        </select> <br>
+        address: <br>
+        <textarea name="address" id="" placeholder="Enter address"> </textarea><br>
+        <button type="button" onclick="form_handle()">submit</button>
+
+
+    </form>
+    <div id="display"></div>
+    <script>
+        function form_handle() {
+            let fname = document.rgs.FullName.value;
+            let gender = document.rgs.gender.value;
+            let dirstic = document.rgs.dirstic.value;
+            let output = fname + "welcome" + gender + "male" + dirstic + "rajshahi";
+            // alert(fname);
+            // alert(gender);
+            // alert(dirstic);
+            document.getElementById("display").innerHTML = output;
+
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

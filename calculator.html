@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>sum function</h3>
+    <div id="display"></div>
+    <script>
+        function SumFunc(x, y) {
+            let z;
+            x = prompt("enter frist number");
+            y = prompt("enter second number");
+            x = parseInt(x);
+            y = parseInt(y);
+            z = x + y;
+            document.getElementById("display").innerHTML = "total is: " + z;
+
+        }
+        function multilyFunc(x, y) {
+            x = prompt("enter frist number");
+            y = prompt("enter second number");
+            x = parseInt(x);
+            y = parseInt(y);
+            z = x * y;
+            document.getElementById("display").innerHTML = "total is:" + z;
+
+        }
+
+
+    </script>
+
+    <button onclick='SumFunc()'> sum function </button>
+    <button onclick='multilyFunc()'> multilyFunc </button>
+
+</body>
+
+</html>
