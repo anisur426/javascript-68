@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Form validation</h3>
+
+    <form action="" name="Form_validation" onsubmit=" return Form_validation">
+
+
+        <input type="text" name="FullName" placeholder="Enter Your name"> <br>
+        <input type="text" name="Email" placeholder="Enter Your Email"> <br>
+        <input type="text" name="Phone Number" placeholder="Enter Your number"> <br>
+
+        <input type="submit" name="submit" value="submit">
+    </form>
+    <script>
+        function Form_validation() {
+            let FullName = document.Form_validation.FullName;
+            let Email = document.Form_validation.Email;
+            let Phone = document.Form_validation.Phone;
+
+            if (FullName == "") {
+                alert("name can't be blank");
+                return false;
+            }
+
+
+            if (Email == "") {
+                alert("mail can't be blank");
+                return false;
+            }
+            if (Phone == "") {
+                alert("phone can't  be blank");
+                return false;
+            }
+
+
+
+
+
+        }
+        Form_validation()
+    </script>
+
+
+
+
+</body>
+
+</html>

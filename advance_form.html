@@ -14,20 +14,28 @@
 
         Name: <br>
         <input type="text" name="FullName" placeholder="Enter Your name"> <br>
-        Gender:
-        <input type="radio" name="gender" value="male"> male
+        Gender:<br>
+        <input type="radio" name="gender" value="male"> male<br>
         <input type="radio" name="gender" value="female"> female <br>
-        dirstic: <br>
-        <select name="dirstic">
+        district: <br>
+        <select name="district">
             <option value=""> select one</option>
             <option>Dhaka </option>
             <option>rajshahi</option>
             <option>khulna</option>
-            <option>barisaslo</option>
+            <option>barisal</option>
         </select> <br>
         address: <br>
         <textarea name="address" id="" placeholder="Enter address"> </textarea><br>
-        <button type="button" onclick="form_handle()">submit</button>
+        Skills: <br>
+        <input type="checkbox" name="Skills[]" value="html">HTML
+        <input type="checkbox" name="Skills[]" value="css">CSS
+        <input type="checkbox" name="Skills[]" value="Java">JAVA
+        <input type="checkbox" name="Skills[]" value="java script">JAVA SCRIPT
+        <input type="checkbox" name="Skills[]" value="php">PHP
+        <br>
+
+        <button onclick="form_handle()">submit</button>
 
 
     </form>
@@ -36,11 +44,12 @@
         function form_handle() {
             let fname = document.rgs.FullName.value;
             let gender = document.rgs.gender.value;
-            let dirstic = document.rgs.dirstic.value;
-            let output = fname + "welcome" + gender + "male" + dirstic + "rajshahi";
+            let district = document.rgs.district.value;
+            let checkbox = document.rgs.checkbox.value;
+            let output = fname + "welcome" + gender + "male" + district + "rajshahi" + checkbox + "";
             // alert(fname);
             // alert(gender);
-            // alert(dirstic);
+            alert(district);
             document.getElementById("display").innerHTML = output;
 
         }  
