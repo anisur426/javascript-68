@@ -28,11 +28,11 @@
         address: <br>
         <textarea name="address" id="" placeholder="Enter address"> </textarea><br>
         Skills: <br>
-        <input type="checkbox" name="Skills[]" value="html">HTML
-        <input type="checkbox" name="Skills[]" value="css">CSS
-        <input type="checkbox" name="Skills[]" value="Java">JAVA
-        <input type="checkbox" name="Skills[]" value="java script">JAVA SCRIPT
-        <input type="checkbox" name="Skills[]" value="php">PHP
+        <input type="checkboxes" name="Skills[]" class="Skills[]" value="html">HTML
+        <input type="checkboxes" name="Skills[]" class="Skills[]" value="css">CSS
+        <input type="checkboxes" name="Skills[]" class="Skills[]" value="Java">JAVA
+        <input type="checkboxes" name="Skills[]" class="Skills[]" value="java script">JAVA SCRIPT
+        <input type="checkboxes" name="Skills[]" class="Skills[]" value="php">PHP
         <br>
 
         <button onclick="form_handle()">submit</button>
@@ -44,9 +44,11 @@
         function form_handle() {
             let fname = document.rgs.FullName.value;
             let gender = document.rgs.gender.value;
-            let district = document.rgs.district.value;
-            let checkbox = document.rgs.checkbox.value;
-            let output = fname + "welcome" + gender + "male" + district + "rajshahi" + checkbox + "";
+
+            let Skills = ""
+            let output;
+            let checkboxes = document.getElementByIdclassname(Skills)
+
             // alert(fname);
             // alert(gender);
             alert(district);
