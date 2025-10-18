@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function emailValidation() {
+            let pattern = /[A-zo-9._]+[A-zo-9.-]+\.[A-z]{2,4}$/i;
+            if (document.myFrom.email.value.search(pattern) == -1) {
+                alert("Invaid Email");
+
+            }
+            else if (document.myFrom.email.value != document.myFrom.confirmEmail.value) {
+                alert(" Email dose not matching");
+            }
+            else {
+                alert(" Email valid");
+            }
+
+
+        }
+    </script>
+    <form name="myFrom">
+        <strong>Email id:&nbsp;</strong><input type="text" name="email" placeholder="Email id"> <br>
+        <strong>confirm Email id:&nbsp;</strong><input type="text" name=" confirm Email id"
+            placeholder="confirm Email id"> <br>
+        <input type="button" value="submit" onclick="emailValidation" name="save">
+
+    </form>
+</body>
+
+</html>
