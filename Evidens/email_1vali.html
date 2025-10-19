@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>
+        Emailvalidation
+    </h3>
+    <form action="" name="anis">
+        <input type="text" name="Email" placeholder="Enter email"><br>
+        <input type="text" name="confirmemail" placeholder="retype"><br>
+        <input type="button" value="summit" onclick="itsDone()">
+
+    </form>
+    <script>
+        function itsDone() {
+            let email = document.anis.Email.value;
+            let confirmemail = document.anis.confirmemail.value;
+            let pattern = /[A-z0-9]+@[A-z0-9]+\.[A-z]{2,4}$/;
+            if (Email.search(pattern) == -1) {
+                alert("invalid your email")
+            } else if (document.myFrom.email.value != document.myFrom.confirmEmail.value) {
+                alert(" Email dose not matching");
+            }
+            else {
+                alert(" Email valid");
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>
