@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function emailValidation(n){
+            let pattern =/[A-z0-9]+@[A-z0-9]+\.[A-z]{2,4}$/i;
+            if (document.myform.email.value.search (pattern)==-1){
+                alert("invalid E-mail");
+            }
+            else if(document.myform.email.value!=document.myform.confirmEmail.value){
+
+                alert("email does not match");
+            }
+        }
+    </script>
+    <form   name="myfrom">
+        <strong>Email id &nbsp;</strong><input type="text" name="email" placeholder="Enter Email id"> <br>
+              <strong>confirmmEmail id &nbsp;</strong><input type="text" name="email" placeholder="Enter confirmEmail id"> <br>
+              <input type="button"  value="submit" onclick="emailValidation ()" name="save">
+    </form>
+</body>
+</html>
