@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Validation</title>
+    <style>
+        p {
+            background-color: aqua;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Login Form</h2>
+    <form name="LoginForm">
+        <input type="text" name="FullName" placeholder="Enter Your name"><br>
+        <input type="password" name="password" placeholder="Enter password"><br>
+        <input type="password" name="confirm_password" placeholder="Enter password again"><br>
+        <button type="button" onclick="LoginValidation()">Login</button>
+        <p id="ta"></p>
+    </form>
+
+    <script>
+        function LoginValidation() {
+            let FullName = document.LoginForm.FullName.value;
+            let password = document.LoginForm.password.value;
+            let confirm_password = document.LoginForm.confirm_password.value;
+
+            let error = "";
+
+
+            if (FullName === "") {
+                error += "Enter your name\n";
+            } else if (FullName.length < 4 || FullName.length > 12) {
+                error += "Full name must be 4 to 12 characters\n";
+            }
+
+            if (password === "") {
+                error += "Enter password\n";
+            } else if (password.length < 6 || password.length > 8) {
+                error += "Password must be 6 to 8 characters\n";
+            }
+
+            if (confirm_password === "") {
+                error += "Enter password again\n";
+            } else if (password !== confirm_password) {
+                error += "Password doesn't match\n";
+            }
+
+            if (error !== "") {
+                alert(error);
+            } else {
+                document.getElementById("ta").innerHTML = "Login Done";
+            }
+        }
+    </script>
+</body>
+
+</html>
