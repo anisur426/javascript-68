@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="./download (1).jpg" alt="cat" height="300px" width="250px" id="pic" onmouseover="switch1()"
+        onmouseout="switch2()">
+    <script>
+        var image1 = new Image();
+        var image2 = new Image();
+        image1.src = "./download (1).jpg"
+        image2.src = "./download (1).jpg"
+
+        function switch1() {
+            document.getElementById("pic").src = image1.src;
+        }
+
+        function switch2() {
+            document.getElementById("pic").src = image2.src;
+        }
+    </script>
+
+</body>
+
+</html>
