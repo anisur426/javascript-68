@@ -22,9 +22,9 @@
             let email = document.anis.Email.value;
             let confirmemail = document.anis.confirmemail.value;
             let pattern = /[A-z0-9]+@[A-z0-9]+\.[A-z]{2,4}$/;
-            if (Email.search(pattern) == -1) {
+            if (email.search(pattern) == -1) {
                 alert("invalid your email")
-            } else if (document.myFrom.email.value != document.myFrom.confirmEmail.value) {
+            } else if (document.anis.email.value != document.anis.confirmEmail.value) {
                 alert(" Email dose not matching");
             }
             else {

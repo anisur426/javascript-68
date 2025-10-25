@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+
+    <form name="tume">
+        <input type="text" name="Fullname" placeholder="Enter your name"><br>
+        <input type="text" name="Email" placeholder="Enter your email"><br>
+        <input type="text" name="confirmemail" placeholder="Confirm your email"><br>
+        <input type="button" value="Submit" onclick="Itis_ok()">
+    </form>
+
+    <script>
+        function Itis_ok(){
+            let Fullname = document.tume.Fullname.value;
+            let email = document.tume.Email.value;
+            let confirmemail = document.tume.confirmemail.value;
+
+            // right pattern
+            let pattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+
+            if (email.search(pattern) === -1) {
+                alert("Invalid email address");
+                return;
+            }
+
+            if (email !== confirmemail) {
+                alert("Email and confirm email do not match!");
+                return;
+            }
+
+            if (Fullname === "") {
+                alert("Please enter your name");
+                return;
+            }
+
+            alert("Registration successful!");
+        }
+    </script>
+</body>
+</html>
