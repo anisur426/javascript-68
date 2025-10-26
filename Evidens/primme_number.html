@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>
+        check prime number
+    </h2>
+    <script>
+        function checkPrime(b) {
+            if (b == 1) {
+                return b + "1 is always not a prime number";
+            }
+            else if (b == 2) {
+                return b + "2 is always a prime number";
+
+            } else {
+                for (let a = 2; a < b; a++)
+                    if (b % a == 0) {
+                        return b + "this is a prime number";
+
+                    }
+
+            }
+        }
+        document.write(checkPrime(prompt(enteryourNumber)))
+    </script>
+</body>
+
+</html>

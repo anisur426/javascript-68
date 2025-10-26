@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2> class template</h2>
+    <script>
+        class carClass {
+            constructor(id, name, year) {
+                this.name = name;
+                this.year = year;
+                this.id = id;
+            }
+        }
+        console.log(carClass);
+        const car1 = new carClass("audi", 2019, 1);
+        const car2 = new carClass("ford", 2015, 2);
+        console.log(car1);
+        console.log(car2);
+        console.log(car1.year);
+    </script>
+</body>
+
+</html>
