@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+function anis(g) {
+    g = Number(g);
+    
+    if (g == 1) {
+        return g + " is not a prime number";
+    }
+    if (g == 2) {
+        return g + " is a prime number";
+    }
+
+    for (let j = 2; j < g; j++) {
+        if (g % j == 0) {
+            return g + " is not a prime number";
+        }
+    }
+    return g + " is a prime number";
+}
+
+document.write(anis(prompt("Enter a number:")));
+</script>
+
+</body>
+</html>

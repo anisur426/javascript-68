@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      
+    <script>
+function gif(l){
+    l = Number(l); // ensure input is number
+
+    if(l == 1){
+        return l + " is not a prime number";
+    }
+    if(l == 2){
+        return l + " is a prime number";
+    }
+
+    for(let q = 2; q < l; q++){  
+        if(l % q == 0){
+            return l + " is not a prime number";
+        }
+    }
+
+    return l + " is a prime number"; // prime হলে return
+}
+
+document.write(gif(prompt("dial number")));
+</script>
+
+       
+</body>
+</html>
