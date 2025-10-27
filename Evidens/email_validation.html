@@ -8,31 +8,47 @@
 </head>
 
 <body>
-    <script>
-        function emailValidation() {
-            let pattern = /[A-zo-9._]+[A-zo-9.-]+\.[A-z]{2,4}$/i;
-            if (document.myFrom.email.value.search(pattern) == -1) {
-                alert("Invaid Email");
+    <!DOCTYPE html>
+    <html>
 
+    <head>
+        <title>Email Validation</title>
+        <script>
+            function emailValidation() {
+                let pattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+
+                let email = document.myForm.email.value;
+                let confirmEmail = document.myForm.confirmEmail.value;
+
+                if (!pattern.test(email)) {
+                    alert("Invalid Email");
+                }
+                else if (email != confirmEmail) {
+                    alert("Email does not match");
+                }
+                else {
+                    alert("Email is valid");
+                }
             }
-            else if (document.myFrom.email.value != document.myFrom.confirmEmail.value) {
-                alert(" Email dose not matching");
-            }
-            else {
-                alert(" Email valid");
-            }
+        </script>
+    </head>
 
+    <body>
 
-        }
-    </script>
-    <form name="myFrom">
-        <strong>Email id:&nbsp;</strong><input type="text" name="email" placeholder="Email id"> <br>
-        <strong>confirm Email id:&nbsp;</strong><input type="text" name=" confirm Email id"
-            placeholder="confirm Email id"> <br>
-       <input type="button" value="submit" onclick="emailValidation()" name="save">
+        <form name="myForm">
+            <strong>Email id:&nbsp;</strong>
+            <input type="text" name="email" placeholder="Email id"><br><br>
 
+            <strong>Confirm Email id:&nbsp;</strong>
+            <input type="text" name="confirmEmail" placeholder="Confirm Email id"><br><br>
 
-    </form>
+            <input type="button" value="Submit" onclick="emailValidation()" name="save">
+        </form>
+
+    </body>
+
+    </html>
+
 </body>
 
 </html>
