@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function max_min() {
+
+            let count1 = prompt("enter number");
+            let count2 = prompt("enter number");
+            let count3 = prompt("enter number");
+            let count4 = prompt("enter number");
+            let coun5 = prompt("enter number");
+            let coun6 = prompt("enter number");
+
+            const number1 = Number(input);
+            const number2 = Number(input);
+            const number3 = Number(input);
+            const number4 = Number(input);
+            const number5 = Number(input);
+            const number6 = Number(input);
+            const NumberArry = [number1, number2, number3, number4, number5, number6];
+            let MaximumNum = NumberArry[0];
+            let Minimumnum = NumberArry[0];
+            for (let a = 1; i < NumberArry.length; i++) {
+                if (NumberArry[i] > MaximumNum) {
+                    MaximumNum = NumberArry[i];
+                }
+                if (NumberArry[i] < Minimumnum) {
+                    Minimumnum = NumberArry[i];
+                }
+            }
+        }
+        document.write("MaximumNum is " + MaximumNum + "" + "Minimumnum" + Minimumnum);
+
+    </script>
+</body>
+
+</html>
