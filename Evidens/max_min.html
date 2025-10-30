@@ -15,19 +15,19 @@
             let count2 = prompt("enter number");
             let count3 = prompt("enter number");
             let count4 = prompt("enter number");
-            let coun5 = prompt("enter number");
-            let coun6 = prompt("enter number");
+            let count5 = prompt("enter number");
+            let count6 = prompt("enter number");
 
-            const number1 = Number(input);
-            const number2 = Number(input);
-            const number3 = Number(input);
-            const number4 = Number(input);
-            const number5 = Number(input);
-            const number6 = Number(input);
+            const number1 = Number(count1);
+            const number2 = Number(count2);
+            const number3 = Number(count3);
+            const number4 = Number(count4);
+            const number5 = Number(count5);
+            const number6 = Number(count6);
             const NumberArry = [number1, number2, number3, number4, number5, number6];
             let MaximumNum = NumberArry[0];
             let Minimumnum = NumberArry[0];
-            for (let a = 1; i < NumberArry.length; i++) {
+            for (let i = 1; i < NumberArry.length; i++) {
                 if (NumberArry[i] > MaximumNum) {
                     MaximumNum = NumberArry[i];
                 }
@@ -35,8 +35,10 @@
                     Minimumnum = NumberArry[i];
                 }
             }
+            document.write("Maximum Num is " + MaximumNum + "    " + "Minimum Num" + Minimumnum);
         }
-        document.write("MaximumNum is " + MaximumNum + "" + "Minimumnum" + Minimumnum);
+
+        max_min()
 
     </script>
 </body>

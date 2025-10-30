@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="anis">
+        <input type="text" name="Name" placeholder="Enter name"><br> placeholder="enter your id"><br> placeholder="enter
+        your id"><br>
+        <input type="text" name="contact" placeholder="enter your id"><br>
+        <textarea name="Remarks"></textarea>
+        <input type="radio" name="Sex" value="male">male
+        <input type="radio" name="Sex" value="Female">Female<br>
+        <input type="checkbox" name="Course" value="NT">NT
+        <input type="checkbox" name="Course" value="IAD">IAD
+        <input type="checkbox" name="Course" value="DDD">DDD
+        <input type="checkbox" name="Course" value="ESAD">ESAD<br>
+        <select name="location">
+            <option value="banani">Bonani</option>
+            <option value="Dhanmondi">Dhanmondi</option>
+            <option value="Mirpur">Mirpur</option>
+
+        </select>
+        <button type="button" onclick="myform()">submit</button>"
+    </form>
+    <script>
+        function myform() {
+            let name = document.anis.Name.value;
+            let contact = document.anis.contact;
+            let email = document.anis.Email.value;
+            let Remarks = document.anis.Remarks;
+            let Gender = document.anis.Sex.value;
+            let Course = document.anis.Course.value;
+            let location = document.anis.Course.value;
+            if (Name === "") {
+                alert("type your name");
+                return;
+            }
+            if (contact === "") {
+                alert("please enter number");
+                return;
+            }
+            if (Remarks === "") {
+                alert("enter remarks");
+                return;
+            }
+            const Sexradios = document.anis.Sex;
+            let selectSex = "";
+            for (let i = o; i < Sexradios.length; i++) {
+                if (Sexradios[i].checked) {
+                    selectSex = Sexradios.value;
+                    break;
+                }
+            }
+            if (selectSex === "") {
+                alert("select Sex");
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>
