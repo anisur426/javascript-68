@@ -18,6 +18,7 @@
             let count5 = prompt("Enter number 5");
             let count6 = prompt("Enter number 6");
 
+<<<<<<< HEAD
             // স্ট্রিং → নাম্বার কনভার্ট করা
             const number1 = Number(count1);
             const number2 = Number(count2);
@@ -27,13 +28,31 @@
             const number6 = Number(count6);
 
             // নাম্বারগুলোকে অ্যারেতে রাখা
+=======
+            let count1 = prompt("enter number");
+            let count2 = prompt("enter number");
+            let count3 = prompt("enter number");
+            let count4 = prompt("enter number");
+            let count5 = prompt("enter number");
+            let count6 = prompt("enter number");
+
+            const number1 = Number(count1);
+            const number2 = Number(count2);
+            const number3 = Number(count3);
+            const number4 = Number(count4);
+            const number5 = Number(count5);
+            const number6 = Number(count6);
+>>>>>>> ac698a170ead0ffb496437ab33b696d9496ef2da
             const NumberArry = [number1, number2, number3, number4, number5, number6];
 
             // প্রাথমিক মান সেট
             let MaximumNum = NumberArry[0];
             let Minimumnum = NumberArry[0];
+<<<<<<< HEAD
 
             // লুপ চালানো
+=======
+>>>>>>> ac698a170ead0ffb496437ab33b696d9496ef2da
             for (let i = 1; i < NumberArry.length; i++) {
                 if (NumberArry[i] > MaximumNum) {
                     MaximumNum = NumberArry[i];
@@ -42,6 +61,7 @@
                     Minimumnum = NumberArry[i];
                 }
             }
+<<<<<<< HEAD
 
             // ফলাফল দেখানো
             document.write("Maximum number is: " + MaximumNum + "<br>");
@@ -49,6 +69,12 @@
         }
 
         // ফাংশন কল করা
+=======
+            document.write("Maximum Num is " + MaximumNum + "    " + "Minimum Num" + Minimumnum);
+        }
+
+        max_min()
+>>>>>>> ac698a170ead0ffb496437ab33b696d9496ef2da
 
     </script>
 </body>

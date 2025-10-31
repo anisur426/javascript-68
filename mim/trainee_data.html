@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+
+</head>
+
+<body>
+    <form name="myform" id="myform">
+        <input type="text" name="Name" placeholder="Enter your name"><br>
+        <div id="nameError" class="error"></div>
+
+        <input type="text" name="Id" placeholder="Enter your ID"><br>
+        <div id="idError" class="error"></div>
+
+        <textarea name="Remarks" placeholder="Enter remarks"></textarea><br>
+        <div id="remarksError" class="error"></div>
+
+        Sex:<br>
+        <input type="radio" name="Sex" value="Male"> Male
+        <input type="radio" name="Sex" value="Female"> Female<br>
+        <div id="genderError" class="error"></div>
+
+        Courses:<br>
+        <input type="checkbox" name="Course" value="NT"> NT
+        <input type="checkbox" name="Course" value="IAD"> IAD
+        <input type="checkbox" name="Course" value="DDD"> DDD
+        <input type="checkbox" name="Course" value="ESAD"> ESAD<br><br>
+
+        Location:<br>
+        <select name="Location">
+            <option value="Banani">Banani</option>
+            <option value="Dhanmondi">Dhanmondi</option>
+            <option value="Mirpur">Mirpur</option>
+        </select><br><br>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            const form = document.forms["myform"];
+            const name = form.Name.value.trim();
+            const id = form.Id.value.trim();
+            const remarks = form.Remarks.value.trim();
+            const location = form.Location.value;
+
+            // Check which gender is selected
+            let gender = "";
+            if (form.Sex.value) {
+                gender = form.Sex.value;
+            }
+
+            // Get selected courses
+            const courseCheckboxes = form.Course;
+            const courses = [];
+            for (let i = 0; i < courseCheckboxes.length; i++) {
+                if (courseCheckboxes[i].checked) {
+                    courses.push(courseCheckboxes[i].value);
+                }
+            }
+
+            // Clear previous errors
+            document.getElementById("nameError").textContent = "";
+            document.getElementById("idError").textContent = "";
+            document.getElementById("remarksError").textContent = "";
+            document.getElementById("genderError").textContent = "";
+
+            // Validation
+            let valid = true;
+            if (name === "") {
+                document.getElementById("nameError").textContent = "Please enter your name";
+                valid = false;
+            }
+            if (id === "") {
+                document.getElementById("idError").textContent = "Please enter your ID";
+                valid = false;
+            }
+            if (remarks === "") {
+                document.getElementById("remarksError").textContent = "Please enter remarks";
+                valid = false;
+            }
+            if (gender === "") {
+                document.getElementById("genderError").textContent = "Please select gender";
+                valid = false;
+            }
+
+            if (!valid) return;
+
+            const newWindow = window.open("", "_blank", "width=400,height=400");
+
+            newWindow.document.write(`<p><b>Name:</b> ${name}</p>`);
+            newWindow.document.write(`<p><b>ID:</b> ${id}</p>`);
+            newWindow.document.write(`<p><b>Remarks:</b> ${remarks}</p>`);
+            newWindow.document.write(`<p><b>Gender:</b> ${gender}</p>`);
+            newWindow.document.write(`<p><b>Courses:</b> ${courses.join(", ")}</p>`);
+            newWindow.document.write(`<p><b>Location:</b> ${location}</p>`);
+        }
+    </script>
+</body>
+
+</html>
