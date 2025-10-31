@@ -4,36 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Email Validation</title>
 </head>
 
 <body>
-    <h3>
-        Emailvalidation
-    </h3>
-    <form action="" name="anis">
+    <h3>Email Validation</h3>
+    <form name="anis">
         <input type="text" name="Email" placeholder="Enter email"><br>
-        <input type="text" name="confirmemail" placeholder="retype"><br>
-        <input type="button" value="summit" onclick="itsDone()">
-
+        <input type="text" name="confirmemail" placeholder="Retype email"><br>
+        <input type="button" value="Submit" onclick="itsDone()">
     </form>
+
     <script>
         function itsDone() {
             let email = document.anis.Email.value;
             let confirmemail = document.anis.confirmemail.value;
-            let pattern = /[A-z0-9]+@[A-z0-9]+\.[A-z]{2,4}$/;
-            if (email.search(pattern) == -1) {
-                alert("invalid your email")
-            } else if (document.anis.email.value != document.anis.confirmEmail.value) {
-                alert(" Email dose not matching");
-            }
-            else {
-                alert(" Email valid");
-            }
 
+            let pattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
 
+            if (!pattern.test(email)) {
+                alert("Invalid email");
+            } else if (email != confirmemail) {
+                alert("Email does not match");
+            } else {
+                alert("Email valid");
+            }
         }
-
     </script>
 </body>
 

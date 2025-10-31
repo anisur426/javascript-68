@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="anis">
+    <input type="text" name="FullName"placeholder="Enter your name"><br>
+    <input type="text" name="Email"placeholder="Enter your email"><br>
+    <input type="password" name="Password" placeholder="Enter your password"><br>
+    <input type="password" name="Confirm_Password"placeholder="again type password"><br>
+    
+    <button type="button"onclick="LoginForm()">Login</button>
+    </form>
+   <script>
+  function LoginForm(){
+    let FullName=document.anis.FullName.value;
+    let email=document.anis.Email.value;
+    let Password=document.anis.Password.value;
+    let Confirm_Password=document.anis.Confirm_Password.value;
+    
+    if(FullName===""){
+        alert("Enter your name");
+    }else if(FullName.length<3||FullName.length>12){
+        alert("type your name must be 3 to12 characters");
+    }
+    if(Password==="")  {
+        alert("Enter your password");
+    }  else if (Password.length<4||Password.length>8){
+        alert("type your email 4 to 8 digit");
+    }   
+
+  }
+   </script> 
+</body>
+</html>
